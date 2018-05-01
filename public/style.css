@@ -6,6 +6,11 @@ body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #C1B5AD;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+
 }
 
 #map {
@@ -13,6 +18,48 @@ body {
   width: 100vw;
 }
 
-/* #FSMarker {
+#sidebarMaster {
+    display: flex;
+    position: fixed;
+    height: 100%;
+    flex-direction: row;
     z-index: 1;
-} */
+    transform: translateX(-8.5em);
+    transition: transform 0.3s;
+}
+
+#sidebarMaster.active {
+    transform: translateX(0);
+}
+
+#sidebarButton {
+    z-index: 2;
+    width: 23px;
+    height: 48px;
+    transform: translateY(0.5em);
+    cursor: pointer;
+    background: rgba(255,255,255,0.9) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAUCAQAAAAXDMSnAAAAi0lEQ…ueTldC08kcT5YOY9xYujqQM03XKXuaLmEtNF1e1Nz89gbL+0do6OEwRwAAAABJRU5ErkJggg==) 7px center/7px 10px no-repeat;
+    border-left: 1px solid #D4D4D4;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+#sidebar {
+    display: flex;
+    position: relative;
+    height: 80%;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.options {
+    background-color: rgb(255, 182, 193, 0.7);
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.itinerary {
+    background-color: rgb(135, 206, 250, 0.7);
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}

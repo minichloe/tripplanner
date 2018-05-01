@@ -19,6 +19,9 @@ export function buildMarker (type, coordinates) {
         case 'hotel' :
             markerType.style.backgroundImage = "url(http://i.imgur.com/D9574Cu.png)";
         break;
+
+        default:
+            markerType.style.backgroundImage = "url(http://i.imgur.com/D9574Cu.png)";
     }
 
     return new mapboxgl.Marker(markerType).setLngLat(coordinates);

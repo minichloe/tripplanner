@@ -19,9 +19,18 @@ const map = new mapboxgl.Map({
 // htmlFSMarker.style.height = '39px';
 // htmlFSMarker.style.backgroundImage = "url(http://i.imgur.com/WbMOfMl.png)";
 
+const sidebarButton = document.getElementById('sidebarButton')
+sidebarButton.addEventListener('click', () => {
+    const sidebar = document.getElementById('sidebarMaster');
+    sidebar.classList.toggle('active');
+})
+
 const FSMarker = new mapboxgl.Marker()
     .setLngLat([-74.009151, 40.705086])
     .addTo(map);
 
-const empireState = buildMarker('activity', [40.748817, -73.985428]);
+const empireState = buildMarker('activity', [-73.985428, 40.748817]);
 empireState.addTo(map);
+
+const shakeShack = buildMarker('restaurant', [-73.988288, 40.741518]);
+shakeShack.addTo(map);
